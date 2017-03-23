@@ -2,8 +2,8 @@ window.onload = function() {
 
 var zip;
 var requestString;
-var latitude;
-var longitude;
+var latitude = 38;
+var longitude = -121;
 
 var xhttp = new XMLHttpRequest();
 
@@ -25,7 +25,7 @@ var response;
     xhttp.onreadystatechange = function() {
       if(this.readyState == 4 && this.status == 200) {
         response = JSON.parse(this.responseText);
-        writeWeather(response);    
+        writeWeather();    
       }
     };
 
@@ -34,7 +34,7 @@ var response;
       xhttp.send();
     }
 
-  function writeWeather(response) {
+  function writeWeather() {
     document.getElementById('rain').textContent = (response.currently.precipProbability * 100).toFixed(0) + '%';
 
     document.getElementById('wind-speed').textContent = (response.currently.windSpeed).toFixed(0);
