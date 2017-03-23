@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Local Weather</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="mystyles.css">
+    <script type="text/javascript" src="weather.js"></script>
+  </head>
+
+  <body>
+    <div class="content">
+      <main>
+        <div class="flex-container" id="main_">
+          <div class="main-icon">
+            <img id="weather-icon" src="climacons/Shades.svg" alt="weather icon" height="600" width="600">
+          </div>
+          <div class="secondary">
+            <div class="tertiary">
+              <img src="climacons/Umbrella.svg" alt="umbrella" height="120" width="120">
+            </div>
+            <div class="tertiary">
+              <p id="rain">--%</p>
+            </div>
+          </div>
+          <div class="secondary">
+            <div class="tertiary">
+              <img src="climacons/Wind.svg" alt="wind" height="120" width="120">
+            </div>
+            <div class="tertiary">
+              <p id="wind-speed">--</p>
+            </div>
+            <div class="wind-detail">
+              <p class="wind-units">mph</p>
+              <p id="wind-direction">----</p>
+            </div>
+          </div>
+        </div>
+          <div class="footer">
+            <h1 class="city">Sacramento</h1>
+            <h1 id="temp">--</h1>
+          </div>
+        </main>
+    </div>
+    <footer>
+      <a href="https://darksky.net/poweredby/" title="Dark Sky">Powered by Dark Sky</a>
+    </footer>
+  </body>
+</html>
